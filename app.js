@@ -34,18 +34,28 @@ function sks() {
             readline1.question("Press y to Quit", function (y) {
                 
                 if (y == "y") {
-                    console.log("Thank you");
-                    sks();
+                    console.log("Thank you ");
+                    
+                    readline1.close();
+
                     
                 }
 
             });
            
         }
+        else {
+            console.log("You have selected an invalid entry so please press 1, 2 or 3");
+            sks();
+        }
        
         
     });
 }
+readline1.on("close", function () {
+    console.log("close");
+    console.log("Bye Bye !");
+});
 sks();
 
     
